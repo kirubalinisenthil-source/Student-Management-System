@@ -1,41 +1,51 @@
--- Simple SQL Project : Student Management System
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SQL Mini Project</title>
+</head>
+<body>
 
--- Create Database
-CREATE DATABASE StudentDB;
+  <h1>Student Management System</h1>
 
--- Use Database
-USE StudentDB;
+  <h2>SQL Queries Used</h2>
 
--- Create Table
+  <pre>
 CREATE TABLE Students (
-    StudentID INT PRIMARY KEY,
-    Name VARCHAR(50),
-    Department VARCHAR(50),
-    Marks INT
+  StudentID INT PRIMARY KEY,
+  Name VARCHAR(50),
+  Department VARCHAR(50),
+  Marks INT
 );
 
--- Insert Values
 INSERT INTO Students VALUES
 (1, 'Arun', 'CSE', 85),
-(2, 'Priya', 'IT', 90),
-(3, 'Rahul', 'ECE', 78),
-(4, 'Sneha', 'CSE', 88);
+(2, 'Priya', 'IT', 90);
+  </pre>
 
--- Display All Records
-SELECT * FROM Students;
+  <h2>Sample Output</h2>
 
--- Display Students with Marks Above 80
-SELECT * FROM Students
-WHERE Marks > 80;
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Marks</th>
+    </tr>
 
--- Update Student Marks
-UPDATE Students
-SET Marks = 95
-WHERE StudentID = 2;
+    <tr>
+      <td>1</td>
+      <td>Arun</td>
+      <td>CSE</td>
+      <td>85</td>
+    </tr>
 
--- Delete a Record
-DELETE FROM Students
-WHERE StudentID = 3;
+    <tr>
+      <td>2</td>
+      <td>Priya</td>
+      <td>IT</td>
+      <td>90</td>
+    </tr>
+  </table>
 
--- Final Table
-SELECT * FROM Students;
+</body>
+</html>
